@@ -1,0 +1,74 @@
+.quantity-controller-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.quantity-controller-icon {
+  color: #616e7c;
+  width: 16px;
+  height: 16px;
+}
+
+.quantity {
+  color: #616e7c;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+th,
+td {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 40px;
+  color: #090580;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.button-price {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-heading {
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  color: red;
+}
+.prdt-group {
+  text-align: center;
+}
+
+.table-container {
+  background-color: #bc7af9;
+}
+
+.table-head {
+  color: yellow;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.heading-image {
+  width: 35px;
+  height: 25px;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+@media and screen (min-width: 768px) {
+  .heading-image {
+    width: 65px;
+    height: 45px;
+  }
+}

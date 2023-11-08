@@ -1,0 +1,19 @@
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    
+    "name":"Rohit",
+    "address":"ABC Apartment",
+    "place":"Koti Ring Road",
+    "pincode":500003,
+    "whatsapp":"9856412323",
+    "email":"rohit@gmail.com"
+}
+
+###
+GET http://localhost:5000/
+
+###
+DELETE http://localhost:5000/users/
