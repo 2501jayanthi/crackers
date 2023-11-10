@@ -1,74 +1,197 @@
-.quantity-controller-button {
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.all-products-section {
+  display: flex;
+  flex-direction: column;
 }
 
-.quantity-controller-icon {
-  color: #616e7c;
-  width: 16px;
-  height: 16px;
+@media screen and (min-width: 768px) {
+  .all-products-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
 }
 
-.quantity {
-  color: #616e7c;
+@media screen and (min-width: 768px) {
+  .all-products-container {
+    margin-left: 30px;
+    width: 70%;
+    .all-products-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 768px) {
+      .all-products-section {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .products-loader-container {
+        width: 70%;
+      }
+    }
+
+    .products-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+  }
+}
+
+.products-heading {
+  color: #475569;
   font-family: "Roboto";
   font-size: 20px;
   font-weight: 500;
-  margin-left: 24px;
-  margin-right: 24px;
 }
 
-th,
-td {
-  padding-top: 10px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  padding-right: 40px;
-  color: #090580;
-  font-weight: 600;
-  font-size: 20px;
+@media screen and (min-width: 768px) {
+  .products-heading {
+    font-size: 32px;
+  }
 }
 
-.button-price {
+.products-list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0;
 }
 
-.item-heading {
-  text-align: center;
+.no-products-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  align-self: center;
-  color: red;
+  padding-bottom: 64px;
+  margin-top: 48px;
 }
-.prdt-group {
+
+@media screen and (min-width: 768px) {
+  .no-products-view {
+    margin-left: 30px;
+    width: 70%;
+    padding-bottom: 0;
+    margin-top: 0px;
+  }
+}
+
+.no-products-img {
+  width: 250px;
+  height: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .no-products-img {
+    width: 459px;
+    height: 315px;
+  }
+}
+
+.no-products-heading {
+  color: #171f46;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3px;
+}
+
+@media screen and (min-width: 768px) {
+  .no-products-heading {
+    margin-top: 32px;
+    font-size: 24px;
+  }
+}
+
+.no-products-description {
   text-align: center;
+  color: #64748b;
+  font-family: "Roboto";
+  font-size: 14px;
+  width: 90%;
+  max-width: 288px;
+  line-height: 1.3;
 }
 
-.table-container {
-  background-color: #bc7af9;
+@media screen and (min-width: 768px) {
+  .no-products-description {
+    margin-top: 12px;
+    font-size: 18px;
+    width: 60%;
+    max-width: 466px;
+  }
 }
 
-.table-head {
-  color: yellow;
-  font-size: 24px;
-  font-weight: bolder;
-}
-.container {
+.products-error-view-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  padding-bottom: 64px;
 }
 
-.heading-image {
-  width: 35px;
-  height: 25px;
-  margin-top: 0px;
-  margin-left: 15px;
+@media screen and (min-width: 768px) {
+  .products-error-view-container {
+    margin-top: 0px;
+    margin-left: 30px;
+    width: 70%;
+    padding-bottom: 0;
+  }
 }
-@media and screen (min-width: 768px) {
-  .heading-image {
-    width: 65px;
-    height: 45px;
+
+.products-failure-img {
+  width: 250px;
+  height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .products-failure-img {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+.product-failure-heading-text {
+  color: #171f46;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+  .product-failure-heading-text {
+    font-size: 24px;
+  }
+}
+
+.products-failure-description {
+  text-align: center;
+  color: #64748b;
+  font-family: "Roboto";
+  font-size: 14px;
+  width: 90%;
+  max-width: 288px;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+  .products-failure-description {
+    font-size: 18px;
+    width: 60%;
+    max-width: 466px;
+  }
+}
+
+.products-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .products-loader-container {
+    width: 70%;
   }
 }

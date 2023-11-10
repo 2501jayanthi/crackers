@@ -26,16 +26,37 @@ const initializeDbAndServer = async () => {
   }
 };
 initializeDbAndServer();
-//GET ALL USERS
-app.get("/", async (request, response) => {
-  const getUsersQuery = `
+
+app.get("/products/", async (request, response) => {
+  const getProductsQuery = `
     SELECT
       *
     FROM
-      user
-    `;
-  const UsersArray = await db.all(getUsersQuery);
-  response.send(UsersArray);
+      products
+    ;`;
+  const productsArray = await db.all(getProductsQuery);
+  response.send(productsArray);
+});
+
+//GET Product
+
+app.get("/products/:productId/", async (request, response) => {
+  const { productId } = request.params;
+  const getProductQuery = `
+    SELECT
+      *
+    FROM
+      products
+    WHERE
+      products_id = ${productId};`;
+  try {
+    const product = await db.get(getProductQuery);
+    response.send(product);
+  } catch (error) {
+    response
+      .status(500)
+      .send({ error: "An error occurred while processing your request." });
+  }
 });
 
 //Create New User
